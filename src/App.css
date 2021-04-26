@@ -1,38 +1,277 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+body {
+  background-color: #141414;
+  color: #fff;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+#logo {
+  height: 3rem;
+  margin: 1rem;
+}
+
+.navbar-style {
+  background-color: #090909;
+  margin-bottom: 30px;
+}
+
+.navbar-toggler {
+  background-color: #fff;
+  margin-right: 15px;
+}
+
+.nav-link-style {
+  color: #fff;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.nav-link-style:hover {
+  border: 1px solid #fff;
+  border-radius: 20px;
+}
+
+.bi {
+  padding: 0px 5px;
+  font-size: 1.5rem;
+}
+
+.btn-primary {
+  background-color: #1ad1ff;
+  border-color: #1ad1ff;
+  color: #141414;
+}
+
+.btn-primary:hover {
+  background-color: #00a3cc;
+  border-color: #00a3cc;
+}
+
+.btn-primary:disabled {
+  background-color: #00a3cc;
+  border-color: #00a3cc;
+}
+
+.btn-success {
+  background-color: #1affa3;
+  border-color: #1affa3;
+  color: #141414;
+}
+
+.btn-success:hover {
+  background-color: #00cc7a;
+  border-color: #00cc7a;
+}
+
+.btn-success:disabled {
+  background-color: #00cc7a;
+  border-color: #00cc7a;
+}
+
+.btn-danger {
+  background-color: #ff3333;
+  border-color: #ff3333;
+  color: #141414;
+}
+
+.btn-danger:hover {
+  background-color: #e60000;
+  border-color: #e60000;
+}
+
+.btn-danger:disabled {
+  background-color: #e60000;
+  border-color: #e60000;
+}
+
+.btn-left-mod {
+  width: 48%;
+  float: left;
+}
+
+.btn-right-mod {
+  width: 48%;
+  float: right;
+}
+
+.form-control {
+  background-color: #141414;
+  border: 2px groove #fff;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.form-control:focus {
+  background-color: #141414;
+  color: #fff;
+}
+
+.movie-card {
+  background-color: #090909;
+  border-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem;
+  width: 300px;
+  padding: 0;
+}
+
+.movie-card img {
+  max-width: 100%;
+}
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-card-info {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie-card-info h3 {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.movie-controls {
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.page-title {
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.movie-counter {
+  background-color: #1affa3;
+  border-radius: 25px;
+  font-weight: bold;
+  padding: 5px 10px;
+  position: absolute;
+  right: 10px;
+  top: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fluid-fix {
+  margin-bottom: 50px;
+}
+
+.fluid-fix > .row {
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+}
+
+.popular-scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #141414;
+  border: 1px solid #090909;
+  border-radius: 10px;
+}
+
+.popular-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  display: none;
+}
+
+.popular-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border: 1px solid #090909;
+  border-radius: 10px;
+}
+
+.fluid-fix:hover .popular-scrollbar::-webkit-scrollbar {
+  display: inline-block;
+}
+
+.modal-content {
+  background-color: #141414;
+  border: 2px solid #fff;
+}
+
+.modal-img-holder {
+  width: 200px;
+  margin: auto;
+}
+
+.modal-img-holder > img {
+  width: 200px;
+  margin-bottom: 5px;
+}
+
+.modal-genre {
+  background-color: #090909;
+  margin: 2px;
+  padding: 1px;
+}
+
+.modal-movie-info {
+  margin-bottom: 10px;
+  padding: 5px 20px 5px;
+}
+
+.sr-only {
+  display: none;
+}
+
+.overwiev-align {
+  text-align: justify;
+}
+
+.movie-score {
+  padding: 0.25rem;
+  border-radius: 50%;
+}
+
+.movie-score.green {
+  color: green;
+  font-weight: bold;
+}
+
+.movie-score.green-yellow {
+  color: greenyellow;
+  font-weight: bold;
+}
+
+.movie-score.orange {
+  color: orange;
+  font-weight: bold;
+}
+
+.movie-score.red {
+  color: red;
+  font-weight: bold;
+}
+
+.genre-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.close {
+  background-color: #141414;
+  border: 1.5px solid #fff;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0 10px 0;
+}
+
+.control-input {
+  margin: 1rem;
 }
